@@ -42,7 +42,10 @@ body {
   display: flex;
   justify-content: center;
   padding: 1em;
-  font-size: 18px;
+  font-size: 18px;.ativo {
+  background-color: var(--botao-ativo);
+  border-bottom: 4px solid var(--verde);
+}
   align-items: center;
   width: 100%;
   border-bottom: 4px solid var(--botao-ativo);
@@ -62,6 +65,16 @@ body {
   /* Código omitido */
 
   .botao:last-child {
+.ativo {
+  background-color: var(--botao-ativo);
+  border-bottom: 4px solid var(--verde);
+}
+
+    
     border-radius: 0 40px 0 0;
   }
 }
+<button class="botao ativo">Cursos na Alura</button>
+<button class="botao">Criar projetos em Javascript</button>
+<button class="botao">Criar um portfolio</button>
+<button class="botao">Atualizar meu currículo</button>
