@@ -36,16 +36,13 @@ body {
 }
 
 .botao {
-  font-family: "Crakra Petch", sans-serif;
+  font-family: "Chakra Petch", sans-serif;
   background-color: var(--botao-inativo);
   color: var(--branco);
   display: flex;
   justify-content: center;
   padding: 1em;
-  font-size: 18px;.ativo {
-  background-color: var(--botao-ativo);
-  border-bottom: 4px solid var(--verde);
-}
+  font-size: 18px;
   align-items: center;
   width: 100%;
   border-bottom: 4px solid var(--botao-ativo);
@@ -54,30 +51,31 @@ body {
   border-top: none;
 }
 
-.botao:first-child {
-  border-radius: 40px 40px 0 0;
-}
 
 .botoes {
   display: block;
 }
-@media screen and (min-width: 768px) {
-  /* Código omitido */
 
-  .botao:last-child {
+
 .ativo {
   background-color: var(--botao-ativo);
   border-bottom: 4px solid var(--verde);
 }
 
-    
-    border-radius: 0 40px 0 0;
-  }
+.abas-textos {
+  background-color: var(--texto-fundo);
+  padding: 40px;
+  border-radius: 0 0 40px 40px;
 }
-.botao.ativo {
-  background-color: var(--botao-ativo);
-  border-bottom: 4px solid var(--verde);
+
+.aba-conteudo.ativo {
+  display: block;
 }
+
+.aba-conteudo {
+  display: none;
+}
+
 .aba-conteudo-titulo-principal {
   font-size: 28px;
   text-align: center;
@@ -87,7 +85,24 @@ body {
   color: var(--verde);
   text-transform: uppercase;
 }
-<button class="botao ativo">Cursos na Alura</button>
-<button class="botao">Criar projetos em Javascript</button>
-<button class="botao">Criar um portfolio</button>
-<button class="282030botao">Atualizar meu currículo</button>
+
+.contador {
+  font-size: 20px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+
+  .botoes {
+    display: flex;
+  }
+
+  .botao:first-child {
+    border-radius: 40px 0px 0 0;
+  }
+
+  .botao:last-child {
+    border-radius: 0 40px 0 0;
+  }
+
+}
