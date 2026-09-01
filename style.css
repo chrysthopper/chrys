@@ -1,108 +1,145 @@
-@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
 
-:root {
-  --cor-de-fundo: #1e1e1e;
-  --verde: #6fff57;
-  --branco: #ffffff;
-  --botao-ativo: #3a375e;
-  --botao-inativo: rgba(58, 55, 94, 0.5);
-  --texto-fundo: rgba(58, 55, 94, 0.3);
+:root{
+    --branco: white;
+    --cor-de-fundo: #00162E;
+    --fundo-senha: #00244D;
+    --fundo-texto: #001E40;
+    --borda: #0075FF;
+    --roboto: 'Roboto', sans-serif;
+    --roboto-mono: 'Roboto Mono', monospace;
 }
 
-body {
-  background-color: var(--cor-de-fundo);
-  color: var(--branco);
-  font-family: "Chakra Petch", sans-serif;
+*{
+    font-weight: 400;
 }
 
-.conteudo-principal {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
+body{
+    color: var(--branco);
+    background-color: var(--cor-de-fundo);
+    font-family: var(--roboto);
 }
 
-.titulo-principal {
-  text-align: left;
-  width: 100%;
-  font-size: 32px;
+.titulo-principal{
+    font-family: var(--roboto-mono);
+    font-size: 32px;
 }
 
-.titulo-principal span {
-  color: var(--verde);
+.titulo-secundario{
+    font-size: 24px;
 }
 
-.botao {
-  font-family: "Chakra Petch", sans-serif;
-  background-color: var(--botao-inativo);
-  color: var(--branco);
-  display: flex;
-  justify-content: center;
-  padding: 1em;
-  font-size: 18px;
-  align-items: center;
-  width: 100%;
-  border-bottom: 4px solid var(--botao-ativo);
-  border-left: 2px solid var(--botao-ativo);
-  border-right: 2px solid var(--botao-ativo);
-  border-top: none;
+.conteudo-titulo{
+    text-align: center;
+    margin-top: 80px;
 }
 
-
-.botoes {
-  display: block;
+.conteudo-senha{
+    margin-top: 80px; 
+    background: var(--fundo-senha);
+    padding: 24px;
+    border-bottom: 6px solid var(--borda);
 }
 
-
-.ativo {
-  background-color: var(--botao-ativo);
-  border-bottom: 4px solid var(--verde);
+#campo-senha{
+    background-color: var(--fundo-senha);
+    border: none;
+    color: var(--branco);
+    font-family: var(--roboto-mono);
+    font-size: 40px;
+    width: 70%;
 }
 
-.abas-textos {
-  background-color: var(--texto-fundo);
-  padding: 40px;
-  border-radius: 0 0 40px 40px;
+#campo-senha:focus{
+    outline: none;
 }
 
-.aba-conteudo.ativo {
-  display: block;
+.conteudo{
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.aba-conteudo {
-  display: none;
+.parametro{
+    background-color: var(--fundo-texto);
+    border: 2px solid var(--borda);
+    margin-top: 32px;
+    padding: 24px;
 }
 
-.aba-conteudo-titulo-principal {
-  font-size: 28px;
-  text-align: center;
-}
-.aba-conteudo-titulo-secundario {
-  text-align: center;
-  color: var(--verde);
-  text-transform: uppercase;
+.parametro-titulo{
+    font-family: var(--roboto-mono);
+    font-size: 28px;
 }
 
-.contador {
-  font-size: 20px;
-  text-align: center;
+.parametro-senha__titulo{
+    font-size:24px;
 }
 
-@media screen and (min-width: 768px) {
-
-  .botoes {
+.parametro-coluna__senha{
     display: flex;
-  }
+    flex-direction: column;
+    justify-content: center;
+}
+.parametro-senha{
+    width: 50%;
+    margin: 0 auto;
+}
 
-  .botao:first-child {
-    border-radius: 40px 0px 0 0;
-  }
+.parametro-senha-botoes{
+    display: flex;
+    justify-content: center;
+}
 
-  .botao:last-child {
-    border-radius: 0 40px 0 0;
-  }
+.parametro-senha__botao{
+    background-color: var(--fundo-texto);
+    color: var(--branco);
+    border: 2px solid var(--borda);
+    padding: 24px;
+    font-size: 24px;
+    cursor: pointer;
+}
+.parametro-senha__texto{
+    padding: 24px;
+    border-top: 2px solid var(--borda);
+    border-bottom: 2px solid var(--borda);
+    margin: 0;
+    font-size: 24px;
+    cursor: pointer;
+}
 
+.checkbox{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.barra{
+    background-color: var(--fundo-senha);
+    height: 30px;
+    width: 100%;
+}
+.forca{
+    height: 30px;
+    position: relative;
+    bottom: 30px;
+}
+.fraca{
+    width: 25%;
+    background-color: #E71B32; 
+}
+.media{
+    background-color: #FAF408;
+    width: 50%;
+}
+.forte{
+    background-color: #00FF85;
+    width: 100%;
+}
+.parametro-senha-textos{
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+    .parametro-coluna__senha{
+        flex-direction: row;
+    }
 }
